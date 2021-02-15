@@ -1,0 +1,28 @@
+:root {
+    box-sizing: border-box;
+    color: #333;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: inherit;
+    font-weight: inherit;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    font-family: inherit;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    background: #f4f4f4;
+}
