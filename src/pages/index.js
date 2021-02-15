@@ -1,9 +1,13 @@
 import React from 'react';
-import './index.module.css'
+import '../styles/reset.module.css'
+import styles from '../styles/index.module.css'
+import MainLogo from '../vectors/mainLogo.inline.svg'
 
 const Index = () => {
   return (
-    <div>Main page</div>
+    <div className={styles.landingHeader}>
+      <MainLogo />
+    </div>
   );
 }
  
