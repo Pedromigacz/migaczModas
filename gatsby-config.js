@@ -20,5 +20,14 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: process.env.GATSBY_STRAPI_URL || `http://localhost:1337`,
+        queryLimit: 1000,
+        contentTypes: [`pecas`],
+        singleTypes: [`informacoes-de-contato`, `carrossel`],
+      },
+    },
   ],
 };
