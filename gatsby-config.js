@@ -29,5 +29,7 @@ module.exports = {
         singleTypes: [`informacoes-de-contato`, `carrossel`],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 };
