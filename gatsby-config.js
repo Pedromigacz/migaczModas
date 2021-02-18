@@ -3,6 +3,8 @@ module.exports = {
     title: "./",
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -29,7 +31,5 @@ module.exports = {
         singleTypes: [`informacoes-de-contato`, `carrossel`],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
   ],
 };

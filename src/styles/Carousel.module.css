@@ -1,0 +1,28 @@
+.carouselContainer {
+    display: inline-block;
+    width: 60vw;
+    height: calc(55vw * 0.66);
+    overflow: hidden;
+    margin: 5rem 0 0 5rem;
+}
+
+.carouselButtonRight {
+    transform: rotatey(180deg);
+}
+
+.sliderButtons {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 20%;
+    transform: translateY(-100%);
+    cursor: pointer;
+}
+
+.sliderButtons svg {
+    width: 2rem;
+}
+
+.sliderRightButton {
+    float: right;
+}

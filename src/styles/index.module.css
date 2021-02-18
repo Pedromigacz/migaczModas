@@ -1,5 +1,5 @@
 .landingHeader {
-    min-width: 300px;
+    min-width: 30%;
     width: 30%;
     display: flex;
     align-items: center;
@@ -9,4 +9,31 @@
 
 .landingHeader svg {
     width: 100%;
+}
+
+.callToActionContaineir {
+    margin: 3rem;
+    display: inline-block;
+    max-width: 25%;
+    text-align: center;
+}
+
+.callToActionContaineir h1 {
+    margin: 4rem 2rem 0 2rem;
+    font-size: 2.25rem;
+    text-align: justify;
+}
+
+.indexContent {
+    display: flex;
+}
+
+.callToActionContaineir button {
+    border: none;
+    background-color: #0ABBB5;
+    font-size: 3rem;
+    margin-top: 2rem;
+    padding: 1rem 4rem;
+    color: #f4f4f4;
+    cursor: pointer;
 }
