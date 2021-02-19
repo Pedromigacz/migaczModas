@@ -1,0 +1,69 @@
+.FooterContainer {
+    background-color: #333;
+    color: #f4f4f4;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* LetSEncryptData */
+
+.LetsEncryptData {
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+.LetsEncryptData svg {
+    display: inline-block;
+}
+
+.LetsEncryptData h3 {
+    display: inline-block;
+    width: 200px;
+    margin-left: 1rem;
+}
+
+/* ContactData */
+
+.ContactData {
+    margin: 1rem 2rem 1rem auto;
+}
+
+.ContactData svg {
+    margin: .5rem;
+}
+
+/* DevData */
+
+.DevData {
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.DevData strong {
+    color: #89023E;
+}
+
+.DevData span a {
+    background: #141414;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Lower Footer */
+
+.lowerFooter {
+    background-color: #111;
+    color: #c4c4c4;
+    font-size: 14px;
+    padding: 2px;
+    display: flex;
+    width: 100%;
+}
+
+.lowerFooter span {
+    margin: 0 auto;
+}
