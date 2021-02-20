@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #343434;
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    color: #f4f4f4;
+    font-size: 2rem;
+    position: fixed;
+}
+
+.navLogo {
+    margin: 1rem 2rem 1rem 3rem;
+    cursor: pointer;
+}
+
+.contactIcon {
+    margin: 1rem;
+    margin-left: auto;
+    cursor: pointer;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+.cartIcon {
+    margin: 1rem 3rem;
+    cursor: pointer;
+}

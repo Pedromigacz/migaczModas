@@ -3,6 +3,7 @@ import '../styles/reset.module.css'
 import styles from '../styles/index.module.css'
 import MainLogo from '../vectors/mainLogo.inline.svg'
 import { Carousel, Footer } from '../components'
+import { Link } from 'gatsby'
 
 const Index = () => {
   return (
@@ -15,7 +16,7 @@ const Index = () => {
         <Carousel />
         <div className={styles.callToActionContaineir}>
           <h1>Veja nosso catálogo e entanda porque um clássico nunca sai de moda</h1>
-          <button>Catálogo</button>
+          <Link to="/catalogo"><button>Catálogo</button></Link>
         </div>
       </div>
     </div>
