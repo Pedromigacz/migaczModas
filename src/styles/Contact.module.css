@@ -1,0 +1,66 @@
+.contactDropdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.contactModal {
+    width: 400px;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    color: #343434;
+    word-wrap: break-word;
+}
+
+/* Main contact */
+
+.mainContactSession > div {
+    margin: 1rem;
+}
+
+.mainContactSession {
+    vertical-align: middle;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.icon {
+    margin: 1rem 1rem .25rem 1rem;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Horizontal ruler */
+
+.horizontalRuler {
+    margin: 1rem;
+}
+
+/* socialMediaData */
+
+.socialMediaButtons {
+    width: 100%;
+}
+
+.socialMediaButtons > svg {
+    margin: .5rem;
+}
+
+.closeButton {
+    font-size: 3rem;
+    color: #444;
+    background: transparent;
+    border: none;
+    position: relative;
+    float: right;
+    top: -1rem;
+    right: -.5rem;
+    cursor: pointer;
+}
