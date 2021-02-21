@@ -7,6 +7,9 @@
     color: #f4f4f4;
     font-size: 2rem;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .navLogo {

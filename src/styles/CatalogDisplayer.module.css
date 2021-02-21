@@ -1,0 +1,52 @@
+.cardContainer {
+    width: 78vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    max-width: 250px;
+    height: 425px;
+    margin: 1rem;
+}
+
+.marca {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    padding: 6px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.title {
+    text-align: justify;
+    height: 57px;
+    display: block;
+}
+
+.label {
+    position: relative;
+    bottom: 2.75rem;
+}
+
+.label > svg {
+    float: right;
+    position: relative;
+    bottom: 1rem;
+    left: .5rem;
+}
+
+.precoRiscado {
+    text-decoration: line-through;
+    color: #666;
+    margin-right: 1rem;
+    position: relative;
+    top: 1.75rem;
+}
+
+.precoValido {
+    font-weight: 500;
+    position: relative;
+    top: 1.75rem;
+}
