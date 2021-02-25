@@ -71,9 +71,9 @@ const Contact = ({setShowContact}) => {
                 </div>
                 <div className={styles.horizontalRuler}>OU</div>
                 <div className={styles.socialMediaButtons}>
-                    <FacebookIcon />
-                    <InstagramIcon />
-                    <WhatsappIcon />
+                    <a role="button" aria-label="Facebook Media Button" href={Facebook} target="_blank" rel="noopener noreferrer" ><FacebookIcon href={Facebook}/></a>
+                    <a role="button" aria-label="Instagram Media Button" href={Instagram} target="_blank" rel="noopener noreferrer" ><InstagramIcon href={Instagram}/></a>
+                    <a role="button" aria-label="Whatsapp Media Button" href={'https://wa.me/'+Whatsapp} target="_blank" rel="noopener noreferrer" ><WhatsappIcon href={'https:/>/wa.me/'+Whatsapp}/></a>
                 </div>
             </motion.div>
         </motion.div>

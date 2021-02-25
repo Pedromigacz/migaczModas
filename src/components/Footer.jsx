@@ -29,9 +29,9 @@ const Footer = () => {
                 <span>Site desenvolvido por <a href="https://pedromigacz.com"><strong>&#60;</strong>PedroMigacz <strong>&#47;&#62;</strong></a></span>
             </div>
             <div className={styles.ContactData}>
-                <a href={Instagram}><InstagramIcon /></a>
-                <a href={Facebook}><FacebookIcon /></a>
-                <a href={'wa.me/' + Whatsapp}><WhatsappIcon /></a>
+                <a role="button" aria-label="Instagram Media Button" href={Instagram}><InstagramIcon /></a>
+                <a role="button" aria-label="Facebook Media Button" href={Facebook}><FacebookIcon /></a>
+                <a role="button" aria-label="Whatsapp Media Button" href={'wa.me/' + Whatsapp}><WhatsappIcon /></a>
             </div>
         </div>
         <div className={styles.lowerFooter}>

@@ -54,8 +54,8 @@ const Carousel = () => {
                         </div>
                     ))}
                 </Slider>
-                <button onClick={prevSlide} className={styles.sliderButtons}><SliderActionIndicator /></button>
-                <button onClick={nextSlide} className={styles.sliderButtons + ' ' + styles.sliderRightButton}><SliderActionIndicator  className={styles.carouselButtonRight} /></button>
+                <button aria-label="Next slide" onClick={prevSlide} className={styles.sliderButtons}><SliderActionIndicator /></button>
+                <button aria-label="Previous slide" onClick={nextSlide} className={styles.sliderButtons + ' ' + styles.sliderRightButton}><SliderActionIndicator  className={styles.carouselButtonRight} /></button>
             </div>
         </>
     );
