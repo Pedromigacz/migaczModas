@@ -1,14 +1,18 @@
 .cardContainer {
     width: 78vw;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    height: auto;
+    vertical-align: top;
+    margin-top: 2rem;
 }
 
 .card {
     max-width: 250px;
     height: 425px;
-    margin: 1rem;
+    margin: .5rem .25rem;
+    cursor: pointer;
 }
 
 .marca {
@@ -27,7 +31,7 @@
 
 .label {
     position: relative;
-    bottom: 2.75rem;
+    bottom: 43px;
 }
 
 .label > svg {

@@ -1,0 +1,50 @@
+.filtersContainer {
+    display: inline-block;
+    min-width: 250px;
+    width: 16vw;
+    margin-top: 2.5rem;
+}
+
+.label {
+    display: block;
+    margin: 12px 1rem 4px 1rem;
+}
+
+.priceSorter select {
+    border: 1px solid #D4AF37;
+    padding: 2px;
+    margin: .25rem 1rem 0 2rem
+}
+
+.categories,
+.brandSelector {
+    margin-top: 2rem;
+}
+
+.categories label,
+.brandSelector label {
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.categories input,
+.brandSelector input {
+    appearance: none;
+	background-color: #f4f4f4;
+	border: 1px solid #D4AF37;
+	padding: 10px;
+	display: inline-block;
+	position: relative;
+    margin: 8px 4px 0 2rem;
+    cursor: pointer;
+}
+
+.categories input:checked:after,
+.brandSelector input:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	color: #D4AF37;
+}

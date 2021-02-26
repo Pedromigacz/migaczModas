@@ -49,8 +49,9 @@
     width: 100%;
 }
 
-.socialMediaButtons > svg {
+.socialMediaButtons a > svg {
     margin: .5rem;
+    cursor: pointer;
 }
 
 .closeButton {

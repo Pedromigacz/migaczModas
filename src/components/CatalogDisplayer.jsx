@@ -5,10 +5,10 @@ import Img from 'gatsby-image'
 import AddToCartIcon from '../vectors/addToCartIcon.inline.svg'
 
 const CatalogDisplayer = () => {
-    const { catalog } = useContext(CatalogContext)
+    const { displayCatalog } = useContext(CatalogContext)
     return (
         <div className={styles.cardContainer}>
-            {catalog && catalog.map(peca => (
+            {displayCatalog && displayCatalog.map(peca => (
                 <div className={styles.card}>
                     <Img
                         fixed={peca.capa.childImageSharp.fixed}
