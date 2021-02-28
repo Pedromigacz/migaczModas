@@ -13,6 +13,7 @@ const CatalogContextProvider = props => {
                     preco_promocional
                     marca
                     categorias
+                    strapiId
                     capa {
                         childImageSharp {
                             fixed(width: 250, height: 320) {

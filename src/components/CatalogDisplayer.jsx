@@ -3,13 +3,14 @@ import styles from '../styles/CatalogDisplayer.module.css'
 import { CatalogContext } from '../contexts/CatalogContext.jsx'
 import Img from 'gatsby-image'
 import AddToCartIcon from '../vectors/addToCartIcon.inline.svg'
+import { Link } from 'gatsby'
 
 const CatalogDisplayer = () => {
     const { displayCatalog } = useContext(CatalogContext)
     return (
         <div className={styles.cardContainer}>
             {displayCatalog && displayCatalog.map(peca => (
-                <div className={styles.card}>
+                <Link to={'/catalogo/' + peca.strapiId} className={styles.card}>
                     <Img
                         fixed={peca.capa.childImageSharp.fixed}
                         key={peca.capa.childImageSharp.fixed.src}
@@ -33,7 +34,7 @@ const CatalogDisplayer = () => {
                         </div>
                         <AddToCartIcon />
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     )
