@@ -19,11 +19,14 @@
 
 .contactIcon {
     margin: 1rem;
-    margin-left: auto;
     cursor: pointer;
     font-size: inherit;
     background-color: transparent;
     border: none;
+}
+
+.catalogIcon {
+    margin: 1rem 1rem 1rem auto;
 }
 
 .cartIcon {

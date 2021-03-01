@@ -14,6 +14,7 @@ const Navbar = () => {
                 {showContact && <Contact setShowContact={setShowContact}/>}
             </AnimatePresence>
             <Link to="/" ><NavLogo className={styles.navLogo}/></Link>
+            <Link to="/catalogo" className={styles.catalogIcon}>Catalogo</Link>
             <button className={styles.contactIcon} onClick={() => {setShowContact(true)}}>Contato</button>
             <CartIcon  className={styles.cartIcon}/>
         </div>
