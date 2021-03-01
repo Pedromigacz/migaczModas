@@ -1,0 +1,34 @@
+.backdrop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(000, 000, 000, 0.2);
+    z-index: 3;
+}
+
+.messageModal {
+    width: 340px;
+    background-color: #f4f4f4;
+    color: #222;
+    border-radius: 3px;
+}
+
+.closeButton {
+    font-size: 3rem;
+    float: right;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top: .25rem;
+    right: .625rem;
+    cursor: pointer;
+}
+
+.messageModal p {
+    margin: 4rem 2rem 2rem 2rem;
+    text-align: justify;
+}

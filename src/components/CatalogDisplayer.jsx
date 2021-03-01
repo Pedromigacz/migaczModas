@@ -9,12 +9,9 @@ const CatalogDisplayer = () => {
     const { displayCatalog } = useContext(CatalogContext)
     return (
         <div className={styles.cardContainer}>
-            {displayCatalog && displayCatalog.map(peca => (
-                <Link to={'/catalogo/' + peca.strapiId} className={styles.card}>
-                    <Img
-                        fixed={peca.capa.childImageSharp.fixed}
-                        key={peca.capa.childImageSharp.fixed.src}
-                    />
+            {displayCatalog && displayCatalog.map((peca, i) => (
+                <Link to={'/catalogo/' + peca.strapiId} className={styles.card} key={i}>
+                    <Img fixed={peca.capa.childImageSharp.fixed} />
                     <div className={styles.label}>
                         <div className={styles.marca}>{peca.marca}</div>
                         <div className={styles.title}>{peca.titulo}</div>

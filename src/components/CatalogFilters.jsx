@@ -28,33 +28,31 @@ const CatalogFilters = () => {
             </div>
             <div className={styles.brandSelector}>
                 <span className={styles.label}>Marca:</span>
-                {['Bonequim', 'EDex', 'Rio 40 Graus', 'Cheia de Charme', 'Todo Verde', 'Azepez'].map(brand => (
-                    <>
+                {['Bonequim', 'EDex', 'Rio 40 Graus', 'Cheia de Charme', 'Todo Verde', 'Azepez'].map((brand, i) => (
+                    <span key={i}>
                     <input
-                        key={brand}
                         type="checkbox"
                         defaultChecked
                         value={brand}
                         onChange={e => alterBrands(e, brand)}
                     />
                     <label>{brand}</label><br/>
-                    </>
+                    </span>
                 ))
                 }
             </div>
             <div className={styles.categories}>
                 <span className={styles.label}>Categorias:</span>
-                {categories.map(type => (
-                    <>
+                {categories.map((type, i) => (
+                    <span key={i}>
                     <input
-                        key={type}
                         type="checkbox"
                         defaultChecked
                         value={type}
                         onChange={e => alterTypes(e, type)}
                     />
                     <label>{type}</label><br/>
-                    </>
+                    </span>
                 ))
                 }
             </div>
