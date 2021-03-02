@@ -12,6 +12,16 @@ const ProductPage = ({ data: { strapiPecas } }) => {
 
     const { addItemToCart, setOpenCart } = useContext(CartContext)
 
+    const imagesArray = [{
+      localFile:
+      { childImageSharp:
+        {
+          fixed: strapiPecas.capa.childImageSharp.fixed,
+          secondaryFixed: strapiPecas.capa.childImageSharp.secondaryFixed
+        }
+      }
+    }, ...strapiPecas.imagens]
+
     const handleSelect = e => {
       setItemData({...itemData, color: e.target.value})
     }
@@ -37,14 +47,14 @@ const ProductPage = ({ data: { strapiPecas } }) => {
                 <div className={styles.pageContentContainer}>
                   <div className={styles.imageDisplayer}>
                       <div className={styles.imageIconsContainer}>
-                          {strapiPecas.imagens.map((imagem, id) => (
+                          {imagesArray.map((imagem, id) => (
                               <button key={id} onClick={e => {setDisplayImage(id)}}>
                                   <Img fixed={imagem.localFile.childImageSharp.fixed}/>
                               </button>
                           ))}
                       </div>
                       <div className={styles.mainImage}>
-                          <Img fixed={strapiPecas.imagens[displayImage].localFile.childImageSharp.secondaryFixed}/>
+                          <Img fixed={imagesArray[displayImage].localFile.childImageSharp.secondaryFixed}/>
                       </div>
                   </div>
                   <div className={styles.ProductSelector}>
@@ -105,6 +115,16 @@ export const query = graphql`
       altura_da_embalagem_em_cm
       categorias
       comprimento_da_embalagem_em_cm
+      capa {
+        childImageSharp {
+          fixed(width: 32, height: 32, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+          secondaryFixed:fixed(width: 320, height: 420, quality: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       imagens {
         localFile {
           childImageSharp {
