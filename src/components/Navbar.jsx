@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { CartContext } from '../contexts/CartContext.jsx'
 import NavLogo from '../vectors/navLogo.inline.svg'
 import styles from '../styles/Navbar.module.css'
 import CartIcon from '../vectors/cart.inline.svg'
@@ -8,6 +9,8 @@ import { Link } from 'gatsby'
 
 const Navbar = () => {
     const [showContact, setShowContact] = useState(false)
+    const { setOpenCart } = useContext(CartContext)
+
     return (
         <div className={styles.navbar}>
             <AnimatePresence exitBeforeEnter>
@@ -16,7 +19,7 @@ const Navbar = () => {
             <Link to="/" ><NavLogo className={styles.navLogo}/></Link>
             <Link to="/catalogo" className={styles.catalogIcon}>Catalogo</Link>
             <button className={styles.contactIcon} onClick={() => {setShowContact(true)}}>Contato</button>
-            <CartIcon  className={styles.cartIcon}/>
+            <CartIcon  className={styles.cartIcon} onClick={e => setOpenCart(true)}/>
         </div>
     );
 }

@@ -3,14 +3,14 @@ import { graphql } from 'gatsby'
 import { Navbar, Footer, ModalMessage } from '../components'
 import styles from '../styles/ProductPage.module.css'
 import Img from 'gatsby-image'
-import { CatalogContext } from '../contexts/CartContext.jsx'
+import { CartContext } from '../contexts/CartContext.jsx'
 
 const ProductPage = ({ data: { strapiPecas } }) => {
     const [displayImage, setDisplayImage] = useState(0)
     const [itemData, setItemData] = useState({color: '', size: ''})
     const [feedbackMessage, setFeedbackMessage] = useState('')
 
-    const { addItemToCart, setOpenCart } = useContext(CatalogContext)
+    const { addItemToCart, setOpenCart } = useContext(CartContext)
 
     const handleSelect = e => {
       setItemData({...itemData, color: e.target.value})
@@ -19,7 +19,7 @@ const ProductPage = ({ data: { strapiPecas } }) => {
     const adicionarAoCarrinho = () => {
       if(!strapiPecas) return setFeedbackMessage('Algo de errado ocorreu! Por favor, entre em contato conosco para que possamos resolver o problema o mais cedo possível.')
       if(!itemData.size) return setFeedbackMessage('Por favor, selecione um dos tamanhos disponíveis.')
-      if(!itemData.color) return setFeedbackMessage('Por favor, selecione uma das cores disponíveis.')
+      if(!itemData.color || itemData.color === 'default') return setFeedbackMessage('Por favor, selecione uma das cores disponíveis.')
       addItemToCart({item: strapiPecas, personalData: itemData})
       setOpenCart(true)
     }
@@ -64,7 +64,7 @@ const ProductPage = ({ data: { strapiPecas } }) => {
                       <div className={styles.colorSelector}>
                         <span>Cor:</span>
                         <select onBlur={handleSelect} defaultValue="default">
-                          <option hidden disabled value value="default">Selecione uma cor</option>
+                          <option hidden disabled value="default">Selecione uma cor</option>
                           {strapiPecas.cores_disponiveis.split('\n').map(cor => <option key={cor}>{cor}</option>)}
                         </select>
                       </div>
