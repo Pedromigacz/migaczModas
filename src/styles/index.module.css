@@ -14,7 +14,7 @@
 .callToActionContaineir {
     margin: 3rem;
     display: inline-block;
-    max-width: 25%;
+    width: 25%;
     text-align: center;
 }
 
@@ -39,5 +39,32 @@
 }
 
 .pageContainer {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+@media(max-width: 1250px) {
+    .indexContent {
+        flex-direction: column;
+        align-items: center;
+    }
+    .callToActionContaineir {
+        width: 50%;
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 767px) {
+    .callToActionContaineir {
+        width: 80%;
+    }
+    .callToActionContaineir h1 {
+        font-size: 1.5rem;
+    }
+    .callToActionContaineir button {
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .landingHeader {
+        width: 60%;
+    }
 }

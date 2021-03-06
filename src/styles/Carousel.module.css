@@ -26,3 +26,16 @@
 .sliderRightButton {
     float: right;
 }
+
+@media(max-width: 1250px) {
+    .carouselContainer {
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 450px) {
+    .carouselContainer {
+        width: 100%;
+        height: calc(100vw * 0.66)
+    }
+}
