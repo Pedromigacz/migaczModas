@@ -1,0 +1,53 @@
+.freightModalContainer {
+    min-width: 350px;
+    width: 50%;
+    background-color: #ddd;
+    padding: 2rem 1rem 1rem 1rem;
+    max-height: 75vh;
+    height: min-content;
+    overflow: auto;
+    margin-bottom: 5rem;
+}
+
+.freightModalContainer h2 {
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.submitButton {
+    border: none;
+    background-color: #0ABBB5;
+    color: #f4f4f4;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin: 1rem 4px;
+    cursor: pointer;
+}
+
+/* Freight options */
+
+.freightList {
+    margin: 1rem 0;
+}
+
+.freightList h4 {
+    font-size: 1.25rem;
+}
+
+.freightOption {
+    width: 17rem;
+    margin: 4px .5rem;
+}
+
+freightOption input {
+    cursor: pointer;
+}
+
+.freightOption label {
+    margin-left: .5rem;
+}
+
+.freightPrice {
+    float: right;
+}

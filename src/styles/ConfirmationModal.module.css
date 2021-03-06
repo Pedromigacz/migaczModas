@@ -1,0 +1,64 @@
+.cartList {
+    min-width: 350px;
+    width: 50%;
+    background-color: #ddd;
+    padding: 2rem 0 1rem 0;
+    max-height: 75vh;
+    height: min-content;
+    overflow: auto;
+    margin-bottom: 5rem;
+}
+
+.cartLine {
+    margin: 0 2rem 0 2rem;
+}
+
+.lineImage {
+    width: 90px !important;
+    height: 115px !important;
+}
+
+.lineData {
+    display: inline-block;
+    width: calc(90% - 90px);
+    height: 115px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.lineTitle {
+    display: inline-block;
+    margin: 0 1rem 1rem 3rem;
+    font-size: 1.5rem;
+    color: #111;
+}
+
+.lineColor,
+.lineSize {
+    text-align: start;
+    margin-left: 3rem;
+}
+
+.linePrice {
+    color: #111;
+    font-size: 1.25rem;
+    float: right;
+    position: relative;
+    bottom: 1.5rem;
+
+}
+
+.cartLine hr {
+    margin: 24px auto 24px auto;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #0ABBB5;
+}
+
+.cartLine:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.cartLine:last-child hr {
+    display: none;
+}

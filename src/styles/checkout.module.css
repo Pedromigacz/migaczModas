@@ -1,0 +1,53 @@
+.cartPageContainer {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.cartPageContainer h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0;
+}
+
+.contentContainer {
+    display: inline-flex;
+    width: 100%;
+    min-height: calc(100vh - 152px);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* SIDE CARD STYLES */
+
+.sideCard {
+    font-size: 2rem;
+    background-color: #ddd;
+    padding: 1.5rem;
+    color: #393939;
+}
+
+.sideCard div {
+    margin: 1rem;
+}
+
+.sideCard div span {
+    color: #111;
+}
+
+.sideCard hr {
+    border: none;
+    border-bottom: 1px solid #0ABBB5;
+    margin: 1.5rem auto;
+    width: 75%;
+}
+
+.sideCard button {
+    border: none;
+    background-color: #0ABBB5;
+    color: #f4f4f4;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}

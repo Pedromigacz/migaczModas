@@ -46,12 +46,14 @@
     background-color: #0ABBB5;
     color: #f4f4f4;
     padding: 1rem 2rem;
+    cursor: pointer;
 }
 
 .cartItensContaineir {
     margin: 5rem 1rem 1rem 1rem;
     overflow: auto;
     max-height: 75vh;
+    overflow-x: hidden;
 }
 
 .emptyCartDisclaimer {

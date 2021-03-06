@@ -3,6 +3,7 @@ import { CartContext } from '../contexts/CartContext.jsx'
 import styles from '../styles/Cart.module.css'
 import Img from 'gatsby-image'
 import TrashCanIcon from '../vectors/trashCan.inline.svg'
+import { Link } from 'gatsby'
 
 const Cart = () => {
     const { cart, openCart, setOpenCart, removeItemFromCart, totalPrice } = useContext(CartContext)
@@ -31,7 +32,7 @@ const Cart = () => {
                 </div>
                 <div className={styles.checkoutButtonContainer}>
                     <div className={styles.totalPrice}>Total: {(totalPrice/100).toLocaleString("pt-BR", {style: 'currency', currency: 'BRL' })}</div>
-                    <button aria-label="Finalizar pedido" className={styles.checkoutButton}>Finalizar pedido</button>
+                    <Link to="/checkout"><button aria-label="Finalizar pedido" className={styles.checkoutButton}>Finalizar pedido</button></Link>
                 </div>
             </div>
         </div>
