@@ -11,7 +11,7 @@ const Checkout = () => {
     useEffect(() => {
         setOpenCart(false)
         if(cart.length <= 0) window.location = "/"
-    }, [setOpenCart])
+    }, [setOpenCart, cart.length])
 
     const nextPage = () => {
         if(checkoutModal === 1 && !freight) return setError('Para prosseguir, selecione uma opção de frete.')

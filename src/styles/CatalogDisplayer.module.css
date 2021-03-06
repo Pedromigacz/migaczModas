@@ -59,4 +59,7 @@
     .cardContainer {
         width: 100%;
     }
+    .card {
+        margin: .5rem;
+    }
 }
