@@ -54,3 +54,9 @@
     position: relative;
     top: 1.75rem;
 }
+
+@media(max-width: 1140px) {
+    .cardContainer {
+        width: 100%;
+    }
+}

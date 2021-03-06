@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { CartContext } from '../contexts/CartContext.jsx'
 import styles from '../styles/checkout.module.css'
-import { ConfirmationModal, FreightModal, Footer } from '../components'
+import { ConfirmationModal, Navbar, FreightModal, Footer, ModalMessage } from '../components'
 
 const Checkout = () => {
     const { totalPrice, setOpenCart, freight, cart } = useContext(CartContext)
@@ -14,12 +14,18 @@ const Checkout = () => {
     }, [setOpenCart])
 
     const nextPage = () => {
-        if(checkoutModal === 0 && cart.length >= 0) setError('O carrinho está vazio, ')
+        if(checkoutModal === 1 && !freight) return setError('Para prosseguir, selecione uma opção de frete.')
         setCheckoutModal(checkoutModal + 1)
+    }
+
+    const closeModal = () => {
+        setError(false)
     }
 
     return (
     <>
+        <Navbar />
+        {error && <ModalMessage closeModal={closeModal}>{error}</ModalMessage>}
         <div className={styles.cartPageContainer}>
             <h1>Checkout</h1>
             <div className={styles.contentContainer}>

@@ -16,10 +16,10 @@ const Navbar = () => {
             <AnimatePresence exitBeforeEnter>
                 {showContact && <Contact setShowContact={setShowContact}/>}
             </AnimatePresence>
-            <Link to="/" ><NavLogo className={styles.navLogo}/></Link>
+            <span className={styles.navLogoContainer}><Link to="/" ><NavLogo className={styles.navLogo}/></Link></span>
             <Link to="/catalogo" className={styles.catalogIcon}>Catalogo</Link>
             <button className={styles.contactIcon} onClick={() => {setShowContact(true)}}>Contato</button>
-            <CartIcon  className={styles.cartIcon} onClick={e => setOpenCart(true)}/>
+            <span className={styles.cartIconContainer}><CartIcon  className={styles.cartIcon} onClick={e => setOpenCart(true)}/></span>
         </div>
     );
 }

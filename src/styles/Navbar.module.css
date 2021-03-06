@@ -33,3 +33,50 @@
     margin: 1rem 3rem;
     cursor: pointer;
 }
+
+@media(max-width: 850px) {
+    .navLogo {
+        width: 150px;
+    }
+    .contactIcon,
+    .catalogIcon {
+        font-size: 1.25rem;
+    }
+    .cartIcon {
+        display: inline-block;
+        width: 32px;
+    }
+}
+@media(max-width: 570px) {
+    .cartIcon {
+        margin: 0;
+    }
+    .cartIconContainer {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: #343434;
+        display: inline-block;
+        padding: 0 1.25rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .navbar {
+        height: auto;
+        justify-content: space-evenly;
+    }
+    .catalogIcon {
+        margin: .5rem;
+    }
+    .navLogo {
+        margin: 0;
+    }
+    .navLogoContainer {
+        position: absolute;
+        top: 3.5rem;
+        left: 0;
+        background-color: #343434;
+        width: 100%;
+        text-align: center;
+    }
+}

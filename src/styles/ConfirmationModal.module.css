@@ -62,3 +62,24 @@
 .cartLine:last-child hr {
     display: none;
 }
+
+@media(max-width: 1000px) {
+    .cartList {
+        width: 80%;
+    }
+}
+
+@media(max-width: 670px) {
+    .cartList {
+        width: 100%;
+    }
+}
+@media(max-width: 460px) {
+    .lineTitle {
+        font-size: 1rem;
+    }
+    .lineColor,
+    .lineSize {
+        font-size: 14px;
+    }
+}
