@@ -46,7 +46,7 @@ const ProductPage = ({ data: { strapiPecas } }) => {
                 <h1>{ strapiPecas.titulo }</h1>
                 <div className={styles.pageContentContainer}>
                   <div className={styles.imageDisplayer}>
-                      <div className={styles.imageIconsContainer}>
+                      <div className={styles.imageIconContainer}>
                           {imagesArray.map((imagem, id) => (
                               <button key={id} onClick={e => {setDisplayImage(id)}}>
                                   <Img fixed={imagem.localFile.childImageSharp.fixed}/>

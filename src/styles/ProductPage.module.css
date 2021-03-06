@@ -9,12 +9,12 @@
     text-align: center;
 }
 
-.imageIconsContainer {
+.imageIconContainer {
     width: 64px;
     display: inline-block;
 }
 
-.imageIconsContainer button {
+.imageIconContainer button {
     display: inline-block;
     margin: 8px 1rem;
     border: none;
@@ -85,6 +85,7 @@
 .description {
     width: 60%;
     margin: 4rem;
+    text-align: justify;
 }
 
 /* Price */
@@ -113,4 +114,30 @@
     padding: 1rem 2rem;
     margin: 4rem 1rem;
     cursor: pointer;
+}
+
+@media(max-width: 1200px) {
+    .pageContentContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttonContexts button {
+        margin: 1rem;
+    }
+}
+
+@media(max-width: 383px) {
+    .imageIconContainer {
+        display: flex;
+        flex-direction: row;
+    }
+    .imageDisplayer {
+        margin-bottom: 2rem;
+    }
+    .ProductPageContainer h1 {
+        font-size: 1.5rem;
+    }
+    .description {
+        margin: 3rem;
+    }
 }
