@@ -4,6 +4,7 @@ import { Navbar, Footer, ModalMessage } from '../components'
 import styles from '../styles/ProductPage.module.css'
 import Img from 'gatsby-image'
 import { CartContext } from '../contexts/CartContext.jsx'
+import { AnimatePresence } from 'framer-motion'
 
 const ProductPage = ({ data: { strapiPecas } }) => {
     const [displayImage, setDisplayImage] = useState(0)
@@ -40,7 +41,7 @@ const ProductPage = ({ data: { strapiPecas } }) => {
 
     return (
         <>
-            {feedbackMessage && <ModalMessage closeModal={closeModal}>{feedbackMessage}</ModalMessage>}
+            <AnimatePresence exitBeforeEnter>{feedbackMessage && <ModalMessage closeModal={closeModal}>{feedbackMessage}</ModalMessage>}</AnimatePresence>
             <Navbar />
             <div className={styles.ProductPageContainer}>
                 <h1>{ strapiPecas.titulo }</h1>

@@ -2,10 +2,11 @@ import React, { useState, useEffect, useContext } from 'react';
 import { CartContext } from '../contexts/CartContext.jsx'
 import styles from '../styles/checkout.module.css'
 import { ConfirmationModal, Navbar, FreightModal, Footer, ModalMessage } from '../components'
+import { AnimatePresence } from 'framer-motion'
 
 const Checkout = () => {
     const { totalPrice, setOpenCart, freight, cart } = useContext(CartContext)
-    const [checkoutModal, setCheckoutModal] = useState(1)
+    const [checkoutModal, setCheckoutModal] = useState(0)
     const [error, setError] = useState(false)
 
     useEffect(() => {
@@ -21,11 +22,12 @@ const Checkout = () => {
     const closeModal = () => {
         setError(false)
     }
+    
 
     return (
     <>
         <Navbar />
-        {error && <ModalMessage closeModal={closeModal}>{error}</ModalMessage>}
+        <AnimatePresence exitBeforeEnter>{error && <ModalMessage closeModal={closeModal}>{error}</ModalMessage>}</AnimatePresence>
         <div className={styles.cartPageContainer}>
             <h1>Checkout</h1>
             <div className={styles.contentContainer}>
