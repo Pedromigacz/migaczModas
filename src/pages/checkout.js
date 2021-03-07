@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { CartContext } from '../contexts/CartContext.jsx'
 import styles from '../styles/checkout.module.css'
-import { ConfirmationModal, Navbar, FreightModal, Footer, ModalMessage } from '../components'
+import { ConfirmationModal, Navbar, FreightModal, Footer, ModalMessage, PaymentButton } from '../components'
 import { AnimatePresence } from 'framer-motion'
 
 const Checkout = () => {
@@ -33,6 +33,7 @@ const Checkout = () => {
             <div className={styles.contentContainer}>
                 {(checkoutModal === 0 ) && <ConfirmationModal />}
                 {(checkoutModal === 1 ) && <FreightModal />}
+                {(checkoutModal === 2 ) && <PaymentButton />}
                 <div className={styles.sideCard}>
                     <div>Carrinho................<span>{
                         (totalPrice/100).toLocaleString("pt-BR", {style: 'currency', currency: 'BRL' })
