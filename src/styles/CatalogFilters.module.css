@@ -70,8 +70,15 @@
         bottom: 0;
     }
     .burguerButton {
-        margin: 1rem;
+        margin: 1.25rem;
+        margin-left: 2.5rem;
         position: absolute;
         cursor: pointer;
+    }
+}
+
+@media(max-width: 370px) {
+    .filtersContainer {
+        width: 100%;
     }
 }

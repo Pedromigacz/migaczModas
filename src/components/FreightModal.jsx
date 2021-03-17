@@ -3,12 +3,13 @@ import styles from '../styles/FreightModal.module.css'
 import { CartContext } from '../contexts/CartContext.jsx'
 import FloatingTagInput from './FloatingTagInput.jsx'
 import axios from 'axios'
-import { ModalMessage } from './'
+import { ModalMessage, LoadingIcon } from './'
 
 const FreightModal = () => {
     const { cart, address, setAddress, setFreight } = useContext(CartContext)
     const [freightOptions, setFreightOptions] = useState([])
     const [errorMessage, setErrorMessage] = useState(false)
+    const [loding, setLoading] = useState(false)
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -21,6 +22,7 @@ const FreightModal = () => {
         if(!address.numero) return setErrorMessage('Por favor, preencha o campo número')
         if(!/^[0-9]{0,8}$/.test(address.numero)) return setErrorMessage('O campo número pode conter apenas números')
 
+        setLoading(true)
         const packageInfo = cart.reduce((acum, curr) => ({
             weight: acum.weight + curr.item.peso_em_kg,
             width: (acum.width > curr.item.largura_da_embalagem_em_cm) ? acum.width : curr.item.largura_da_embalagem_em_cm,
@@ -30,15 +32,14 @@ const FreightModal = () => {
         }), {weight: 0, width: 0, height: 0, length: 0, insurance_value: 0})
 
 
-        
         const config = {
             method: 'post',
             url: `${process.env.GATSBY_MELHOR_ENVIO_URL}/api/v2/me/shipment/calculate`,
             headers: { 
               'Accept': 'application/json', 
               'Content-Type': 'application/json', 
-              'Authorization': `Bearer ${process.env.GATSBY_PUBLIC_TOKEN}`, 
-              'User-Agent': `Aplicação ${process.env.GATSBY_EMAIL}`, 
+              "Authorization": `Bearer ${process.env.GATSBY_PUBLIC_TOKEN}`,
+              'User-Agent': `email ${process.env.GATSBY_EMAIL}`, 
             },
             data: {
                 from: { postal_code: process.env.GATSBY_SENDER_CEP },
@@ -47,9 +48,15 @@ const FreightModal = () => {
             }
           };
 
-          axios(config)
-          .then(res => {setFreightOptions(res.data)})
-          .catch(err => {console.log(err.message)})
+        axios(config)
+        .then(res => {
+            setFreightOptions(res.data)
+            setLoading(false)
+        })
+        .catch(err => {
+            setErrorMessage('Algo inesperado aconteceu, entre em contato conosco através da guia de contato, ou tente novamente mais tarde.')
+            setLoading(false)
+        })
     }
 
     const handleChange = e => {
@@ -117,7 +124,7 @@ const FreightModal = () => {
                     largura="8"
                 />
                 <br />
-                <button className={styles.submitButton}>Calcular frete</button>
+                <button className={styles.submitButton} disabled={loding && 'disabled'}>{loding ? <LoadingIcon /> : 'Calcular frete'}</button>
             </form>
             {freightOptions.length !== 0 && (
                 <div className={styles.freightList}>

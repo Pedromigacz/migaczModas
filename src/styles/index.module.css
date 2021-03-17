@@ -36,6 +36,7 @@
     padding: 1rem 4rem;
     color: #f4f4f4;
     cursor: pointer;
+    font-display: inline-block;
 }
 
 .pageContainer {

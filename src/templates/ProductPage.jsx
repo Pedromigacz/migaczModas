@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Navbar, Footer, ModalMessage } from '../components'
 import styles from '../styles/ProductPage.module.css'
 import Img from 'gatsby-image'
@@ -91,7 +91,6 @@ const ProductPage = ({ data: { strapiPecas } }) => {
                   </div>
                 </div>
               <div className={styles.buttonContexts}>
-                <button>Comprar</button>
                 <button onClick={adicionarAoCarrinho}>Adicionar ao Carrinho</button>
               </div>
             </div>

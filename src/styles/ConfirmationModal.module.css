@@ -82,4 +82,11 @@
     .lineSize {
         font-size: 14px;
     }
+    .linePrice {
+        float: none;
+        position: unset;
+    }
+    .lineData {
+        height: auto;
+    }
 }

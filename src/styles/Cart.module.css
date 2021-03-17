@@ -49,6 +49,11 @@
     cursor: pointer;
 }
 
+.checkoutButton:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
 .cartItensContaineir {
     margin: 5rem 1rem 1rem 1rem;
     overflow: auto;

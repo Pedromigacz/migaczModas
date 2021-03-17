@@ -52,6 +52,14 @@
     padding: 1rem 2rem;
     margin: 1rem;
     cursor: pointer;
+    min-width: 147px;
+    max-height: 69px;
+    vertical-align: bottom;
+}
+
+.sideCard button div {
+    margin: 0;
+    width: 32px;
 }
 
 @media(max-width: 1030px) {

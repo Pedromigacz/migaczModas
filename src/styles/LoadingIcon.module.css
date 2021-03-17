@@ -1,0 +1,7 @@
+.loader {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #f4f4f4;
+    border-radius: 20%;
+}

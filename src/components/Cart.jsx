@@ -70,7 +70,11 @@ const Cart = () => {
                     </div>
                     <div className={styles.checkoutButtonContainer}>
                         <div className={styles.totalPrice}>Total: {(totalPrice/100).toLocaleString("pt-BR", {style: 'currency', currency: 'BRL' })}</div>
-                        <Link to="/checkout"><button aria-label="Finalizar pedido" className={styles.checkoutButton}>Finalizar pedido</button></Link>
+                        <Link to="/checkout"><button
+                            disabled={!cart.length && 'disabled'}
+                            aria-label="Finalizar pedido"
+                            className={styles.checkoutButton}
+                        >Finalizar pedido</button></Link>
                     </div>
                 </motion.div>
             </motion.div>
